@@ -73,4 +73,8 @@ connector.name=tpch
 
 - [Single Node]()
 
+![singlenode_demo_architecture](/images/08_singlenode_demo_architecture.png)
+
 - [Multi Node]()
+
+![multinode_demo_architecture](/images/03_multinode_demo_architecture.png)
