@@ -48,10 +48,10 @@ SELECT c.name AS customer,
     o.orderdate,
     n.name AS nation,
     r.name AS region
-FROM tpch.tiny.customer AS c
-    INNER JOIN tpch.tiny.orders AS o ON o.custkey = c.custkey
-    INNER JOIN tpch.tiny.nation AS n ON n.nationkey = c.nationkey
-    INNER JOIN tpch.tiny.region AS r ON r.regionkey = n.regionkey;
+FROM mongo.tiny.customer AS c
+    INNER JOIN mongo.tiny.orders AS o ON o.custkey = c.custkey
+    INNER JOIN mysql.tiny.nation AS n ON n.nationkey = c.nationkey
+    INNER JOIN mysql.tiny.region AS r ON r.regionkey = n.regionkey;
 
 
 SELECT *
