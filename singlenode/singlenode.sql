@@ -37,13 +37,12 @@ inner join mysql.tiny.region as r on r.regionkey = n.regionkey
 /* show new table */
 select * from mongo.tiny.report_table 
 
-/* en çok satış yapılan bölge */
+
 select region, cast(sum(totalprice) as int) as price  from mongo.tiny.report_table 
 group by region 
 order by price desc
 
 
-/* en çok satış yapılan nation */
 select nation , cast(sum(totalprice) as int) as price  from mongo.tiny.report_table 
 group by nation  
 order by price desc
