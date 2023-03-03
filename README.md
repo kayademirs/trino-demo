@@ -71,10 +71,10 @@ connector.name=tpch
 
 ### DEMO
 
-- [Single Node]()
+- [Single Node](https://github.com/kayademirs/trino/tree/master/singlenode)
 
 ![singlenode_demo_architecture](/images/08_singlenode_demo_architecture.png)
 
-- [Multi Node]()
+- [Multi Node](https://github.com/kayademirs/trino/tree/master/multinode)
 
 ![multinode_demo_architecture](/images/03_multinode_demo_architecture.png)
