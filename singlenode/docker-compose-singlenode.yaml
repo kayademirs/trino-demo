@@ -1,0 +1,38 @@
+version: '3.7'
+services:
+  trino-coordinator:
+    container_name: sn-coordinator
+    image: 'trinodb/trino:latest'
+    hostname: trino-coordinator
+    ports:
+      - '9090:8080'
+    volumes:
+      - ./etc:/etc/trino
+    networks:
+      - trino-singlenode-network
+  mysql:
+    container_name: sn-mysql
+    image: mysql:latest
+    hostname: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    ports:
+      - '3306:3306'
+    networks:
+      - trino-singlenode-network
+  mongodb:
+    container_name: sn-mongo
+    image: 'mongo:latest'
+    hostname: mongodb
+    ports:
+      - '27017:27017'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    networks:
+      - trino-singlenode-network
+networks:
+  trino-singlenode-network:
+    driver: bridge
