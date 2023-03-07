@@ -77,4 +77,4 @@ connector.name=tpch
 
 - [Multi Node](https://github.com/kayademirs/trino/tree/master/multinode)
 
-![multinode_demo_architecture](/images/03_multinode_demo_architecture.png)
+![multinode_demo_architecture](/images/03_multinode_architecture.png)
